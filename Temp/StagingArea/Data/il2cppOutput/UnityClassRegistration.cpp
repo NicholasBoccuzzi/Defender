@@ -281,86 +281,86 @@ RegisterBuiltinTypes();
 	RegisterClass<Unity::Component>("Core");
 	//3. EditorExtension
 	RegisterClass<EditorExtension>("Core");
-	//4. Renderer
-	RegisterClass<Renderer>("Core");
-	//5. Shader
-	RegisterClass<Shader>("Core");
-	//6. NamedObject
-	RegisterClass<NamedObject>("Core");
-	//7. Mesh
-	RegisterClass<Mesh>("Core");
-	//8. MonoBehaviour
-	RegisterClass<MonoBehaviour>("Core");
-	//9. Material
-	RegisterClass<Material>("Core");
-	//10. Texture
-	RegisterClass<Texture>("Core");
-	//11. Texture2D
-	RegisterClass<Texture2D>("Core");
-	//12. RenderTexture
-	RegisterClass<RenderTexture>("Core");
-	//13. Sprite
-	RegisterClass<Sprite>("Core");
-	//14. GameObject
-	RegisterClass<GameObject>("Core");
-	//15. GUIElement
-	RegisterClass<GUIElement>("Core");
-	//16. GUILayer
-	RegisterClass<GUILayer>("Core");
-	//17. Transform
-	RegisterClass<Transform>("Core");
-	//18. UI::RectTransform
-	RegisterClass<UI::RectTransform>("Core");
-	//19. AudioClip
-	RegisterClass<AudioClip>("Audio");
-	//20. SampleClip
-	RegisterClass<SampleClip>("Audio");
-	//21. AudioListener
-	RegisterClass<AudioListener>("Audio");
-	//22. AudioBehaviour
-	RegisterClass<AudioBehaviour>("Audio");
-	//23. AudioSource
-	RegisterClass<AudioSource>("Audio");
-	//24. Animator
-	RegisterClass<Animator>("Animation");
-	//25. AnimatorOverrideController
-	RegisterClass<AnimatorOverrideController>("Animation");
-	//26. RuntimeAnimatorController
-	RegisterClass<RuntimeAnimatorController>("Animation");
-	//27. TextRendering::Font
-	RegisterClass<TextRendering::Font>("TextRendering");
-	//28. UI::Canvas
-	RegisterClass<UI::Canvas>("UI");
-	//29. UI::CanvasGroup
-	RegisterClass<UI::CanvasGroup>("UI");
-	//30. UI::CanvasRenderer
-	RegisterClass<UI::CanvasRenderer>("UI");
-	//31. PreloadData
-	RegisterClass<PreloadData>("Core");
-	//32. Cubemap
-	RegisterClass<Cubemap>("Core");
-	//33. Texture3D
-	RegisterClass<Texture3D>("Core");
-	//34. Texture2DArray
-	RegisterClass<Texture2DArray>("Core");
-	//35. MeshFilter
-	RegisterClass<MeshFilter>("Core");
-	//36. MeshRenderer
-	RegisterClass<MeshRenderer>("Core");
-	//37. LowerResBlitTexture
-	RegisterClass<LowerResBlitTexture>("Core");
-	//38. GameManager
-	RegisterClass<GameManager>("Core");
-	//39. TagManager
-	RegisterClass<TagManager>("Core");
-	//40. GlobalGameManager
-	RegisterClass<GlobalGameManager>("Core");
-	//41. GraphicsSettings
-	RegisterClass<GraphicsSettings>("Core");
-	//42. DelayedCallManager
-	RegisterClass<DelayedCallManager>("Core");
-	//43. QualitySettings
+	//4. QualitySettings
 	RegisterClass<QualitySettings>("Core");
+	//5. GlobalGameManager
+	RegisterClass<GlobalGameManager>("Core");
+	//6. GameManager
+	RegisterClass<GameManager>("Core");
+	//7. Renderer
+	RegisterClass<Renderer>("Core");
+	//8. Shader
+	RegisterClass<Shader>("Core");
+	//9. NamedObject
+	RegisterClass<NamedObject>("Core");
+	//10. Mesh
+	RegisterClass<Mesh>("Core");
+	//11. MonoBehaviour
+	RegisterClass<MonoBehaviour>("Core");
+	//12. Material
+	RegisterClass<Material>("Core");
+	//13. Texture
+	RegisterClass<Texture>("Core");
+	//14. Texture2D
+	RegisterClass<Texture2D>("Core");
+	//15. RenderTexture
+	RegisterClass<RenderTexture>("Core");
+	//16. Sprite
+	RegisterClass<Sprite>("Core");
+	//17. GameObject
+	RegisterClass<GameObject>("Core");
+	//18. GUIElement
+	RegisterClass<GUIElement>("Core");
+	//19. GUILayer
+	RegisterClass<GUILayer>("Core");
+	//20. Transform
+	RegisterClass<Transform>("Core");
+	//21. UI::RectTransform
+	RegisterClass<UI::RectTransform>("Core");
+	//22. AudioClip
+	RegisterClass<AudioClip>("Audio");
+	//23. SampleClip
+	RegisterClass<SampleClip>("Audio");
+	//24. AudioListener
+	RegisterClass<AudioListener>("Audio");
+	//25. AudioBehaviour
+	RegisterClass<AudioBehaviour>("Audio");
+	//26. AudioSource
+	RegisterClass<AudioSource>("Audio");
+	//27. Animator
+	RegisterClass<Animator>("Animation");
+	//28. AnimatorOverrideController
+	RegisterClass<AnimatorOverrideController>("Animation");
+	//29. RuntimeAnimatorController
+	RegisterClass<RuntimeAnimatorController>("Animation");
+	//30. TextRendering::Font
+	RegisterClass<TextRendering::Font>("TextRendering");
+	//31. UI::Canvas
+	RegisterClass<UI::Canvas>("UI");
+	//32. UI::CanvasGroup
+	RegisterClass<UI::CanvasGroup>("UI");
+	//33. UI::CanvasRenderer
+	RegisterClass<UI::CanvasRenderer>("UI");
+	//34. PreloadData
+	RegisterClass<PreloadData>("Core");
+	//35. Cubemap
+	RegisterClass<Cubemap>("Core");
+	//36. Texture3D
+	RegisterClass<Texture3D>("Core");
+	//37. Texture2DArray
+	RegisterClass<Texture2DArray>("Core");
+	//38. MeshFilter
+	RegisterClass<MeshFilter>("Core");
+	//39. MeshRenderer
+	RegisterClass<MeshRenderer>("Core");
+	//40. LowerResBlitTexture
+	RegisterClass<LowerResBlitTexture>("Core");
+	//41. TagManager
+	RegisterClass<TagManager>("Core");
+	//42. GraphicsSettings
+	RegisterClass<GraphicsSettings>("Core");
+	//43. DelayedCallManager
+	RegisterClass<DelayedCallManager>("Core");
 	//44. InputManager
 	RegisterClass<InputManager>("Core");
 	//45. TimeManager

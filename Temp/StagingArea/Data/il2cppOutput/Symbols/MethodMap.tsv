@@ -7389,6 +7389,8 @@ Application_CallLowMemory_m2813539296	System.Void UnityEngine.Application::CallL
 Application_get_isPlaying_m100394690	System.Boolean UnityEngine.Application::get_isPlaying()	UnityEngine.CoreModule
 Application_get_isEditor_m857789090	System.Boolean UnityEngine.Application::get_isEditor()	UnityEngine.CoreModule
 Application_get_platform_m2150679437	UnityEngine.RuntimePlatform UnityEngine.Application::get_platform()	UnityEngine.CoreModule
+Application_get_targetFrameRate_m1077623221	System.Int32 UnityEngine.Application::get_targetFrameRate()	UnityEngine.CoreModule
+Application_set_targetFrameRate_m3682352535	System.Void UnityEngine.Application::set_targetFrameRate(System.Int32)	UnityEngine.CoreModule
 Application_CallLogCallback_m255562505	System.Void UnityEngine.Application::CallLogCallback(System.String,System.String,UnityEngine.LogType,System.Boolean)	UnityEngine.CoreModule
 LogCallback__ctor_m144650965	System.Void UnityEngine.Application/LogCallback::.ctor(System.Object,System.IntPtr)	UnityEngine.CoreModule
 LogCallback_Invoke_m1707963620	System.Void UnityEngine.Application/LogCallback::Invoke(System.String,System.String,UnityEngine.LogType)	UnityEngine.CoreModule
@@ -7950,6 +7952,7 @@ PropertyName_op_Implicit_m114733813	UnityEngine.PropertyName UnityEngine.Propert
 PropertyName_ToString_m3328159423_AdjustorThunk	System.String UnityEngine.PropertyName::ToString()	UnityEngine.CoreModule
 PropertyNameUtils_PropertyNameFromString_m3719796130	UnityEngine.PropertyName UnityEngine.PropertyNameUtils::PropertyNameFromString(System.String)	UnityEngine.CoreModule
 PropertyNameUtils_PropertyNameFromString_Injected_m1259736140	System.Void UnityEngine.PropertyNameUtils::PropertyNameFromString_Injected(System.String,UnityEngine.PropertyName&)	UnityEngine.CoreModule
+QualitySettings_set_vSyncCount_m3131636076	System.Void UnityEngine.QualitySettings::set_vSyncCount(System.Int32)	UnityEngine.CoreModule
 Quaternion__ctor_m435141806_AdjustorThunk	System.Void UnityEngine.Quaternion::.ctor(System.Single,System.Single,System.Single,System.Single)	UnityEngine.CoreModule
 Quaternion_Inverse_m1311579081	UnityEngine.Quaternion UnityEngine.Quaternion::Inverse(UnityEngine.Quaternion)	UnityEngine.CoreModule
 Quaternion_op_Multiply_m2607404835	UnityEngine.Vector3 UnityEngine.Quaternion::op_Multiply(UnityEngine.Quaternion,UnityEngine.Vector3)	UnityEngine.CoreModule
@@ -10422,6 +10425,7 @@ ImageFill__ctor_m1654907692	System.Void ImageFill::.ctor()	Assembly-CSharp
 ImageFill_Start_m1884022640	System.Void ImageFill::Start()	Assembly-CSharp
 ImageFill_Update_m2595966541	System.Void ImageFill::Update()	Assembly-CSharp
 LevelManager__ctor_m1695469538	System.Void LevelManager::.ctor()	Assembly-CSharp
+LevelManager_Awake_m2824870717	System.Void LevelManager::Awake()	Assembly-CSharp
 LevelManager_Start_m2992410788	System.Void LevelManager::Start()	Assembly-CSharp
 LevelManager_Update_m2310896440	System.Void LevelManager::Update()	Assembly-CSharp
 LevelManager_loadLevel_m312827559	System.Void LevelManager::loadLevel(System.String)	Assembly-CSharp

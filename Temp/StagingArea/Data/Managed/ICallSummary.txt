@@ -18,6 +18,8 @@ UnityEngine.Animator::ResetTriggerString
 UnityEngine.Animator::SetTriggerString
 UnityEngine.Application::get_isEditor
 UnityEngine.Application::get_isPlaying
+UnityEngine.Application::get_targetFrameRate
+UnityEngine.Application::set_targetFrameRate
 UnityEngine.Application::get_platform
 UnityEngine.AsyncOperation::InternalDestroy
 UnityEngine.AudioClip::get_ambisonic
@@ -248,6 +250,7 @@ UnityEngine.PlayerConnectionInternal::RegisterInternal
 UnityEngine.PlayerConnectionInternal::SendMessage
 UnityEngine.PlayerConnectionInternal::UnregisterInternal
 UnityEngine.PropertyNameUtils::PropertyNameFromString_Injected
+UnityEngine.QualitySettings::set_vSyncCount
 UnityEngine.Quaternion::Inverse_Injected
 UnityEngine.RectOffset::get_bottom
 UnityEngine.RectOffset::get_horizontal

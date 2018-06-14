@@ -7410,6 +7410,8 @@ extern "C" void Application_CallLowMemory_m2813539296 ();
 extern "C" void Application_get_isPlaying_m100394690 ();
 extern "C" void Application_get_isEditor_m857789090 ();
 extern "C" void Application_get_platform_m2150679437 ();
+extern "C" void Application_get_targetFrameRate_m1077623221 ();
+extern "C" void Application_set_targetFrameRate_m3682352535 ();
 extern "C" void Application_CallLogCallback_m255562505 ();
 extern "C" void LogCallback__ctor_m144650965 ();
 extern "C" void LogCallback_Invoke_m1707963620 ();
@@ -7971,6 +7973,7 @@ extern "C" void PropertyName_op_Implicit_m114733813 ();
 extern "C" void PropertyName_ToString_m3328159423_AdjustorThunk ();
 extern "C" void PropertyNameUtils_PropertyNameFromString_m3719796130 ();
 extern "C" void PropertyNameUtils_PropertyNameFromString_Injected_m1259736140 ();
+extern "C" void QualitySettings_set_vSyncCount_m3131636076 ();
 extern "C" void Quaternion__ctor_m435141806_AdjustorThunk ();
 extern "C" void Quaternion_Inverse_m1311579081 ();
 extern "C" void Quaternion_op_Multiply_m2607404835 ();
@@ -10443,6 +10446,7 @@ extern "C" void ImageFill__ctor_m1654907692 ();
 extern "C" void ImageFill_Start_m1884022640 ();
 extern "C" void ImageFill_Update_m2595966541 ();
 extern "C" void LevelManager__ctor_m1695469538 ();
+extern "C" void LevelManager_Awake_m2824870717 ();
 extern "C" void LevelManager_Start_m2992410788 ();
 extern "C" void LevelManager_Update_m2310896440 ();
 extern "C" void LevelManager_loadLevel_m312827559 ();
@@ -10453,7 +10457,7 @@ extern "C" void ShipMovement_Start_m1115004512 ();
 extern "C" void ShipMovement_Update_m1800833022 ();
 extern "C" void ShipMovement_MoveLeft_m2385436365 ();
 extern "C" void ShipMovement_MoveRight_m1160561712 ();
-extern const Il2CppMethodPointer g_MethodPointers[10434] = 
+extern const Il2CppMethodPointer g_MethodPointers[10438] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -17846,6 +17850,8 @@ extern const Il2CppMethodPointer g_MethodPointers[10434] =
 	Application_get_isPlaying_m100394690,
 	Application_get_isEditor_m857789090,
 	Application_get_platform_m2150679437,
+	Application_get_targetFrameRate_m1077623221,
+	Application_set_targetFrameRate_m3682352535,
 	Application_CallLogCallback_m255562505,
 	LogCallback__ctor_m144650965,
 	LogCallback_Invoke_m1707963620,
@@ -18407,6 +18413,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10434] =
 	PropertyName_ToString_m3328159423_AdjustorThunk,
 	PropertyNameUtils_PropertyNameFromString_m3719796130,
 	PropertyNameUtils_PropertyNameFromString_Injected_m1259736140,
+	QualitySettings_set_vSyncCount_m3131636076,
 	Quaternion__ctor_m435141806_AdjustorThunk,
 	Quaternion_Inverse_m1311579081,
 	Quaternion_op_Multiply_m2607404835,
@@ -20879,6 +20886,7 @@ extern const Il2CppMethodPointer g_MethodPointers[10434] =
 	ImageFill_Start_m1884022640,
 	ImageFill_Update_m2595966541,
 	LevelManager__ctor_m1695469538,
+	LevelManager_Awake_m2824870717,
 	LevelManager_Start_m2992410788,
 	LevelManager_Update_m2310896440,
 	LevelManager_loadLevel_m312827559,

@@ -119,9 +119,10 @@ extern const uint32_t HandleAudio_Start_m453638631_MetadataUsageId;
 extern const RuntimeMethod* GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var;
 extern const RuntimeMethod* Object_FindObjectOfType_TisLevelManager_t4033906515_m2102898714_RuntimeMethod_var;
 extern const uint32_t ImageFill_Start_m1884022640_MetadataUsageId;
-extern String_t* _stringLiteral1708937216;
+extern String_t* _stringLiteral62725266;
 extern const uint32_t LevelManager_loadDefender_m3558971923_MetadataUsageId;
 extern RuntimeClass* Input_t1431474628_il2cpp_TypeInfo_var;
+extern RuntimeClass* Vector3_t3722313464_il2cpp_TypeInfo_var;
 extern const uint32_t ShipMovement_MoveLeft_m2385436365_MetadataUsageId;
 extern const uint32_t ShipMovement_MoveRight_m1160561712_MetadataUsageId;
 
@@ -1559,59 +1560,69 @@ public:
 struct  LevelManager_t4033906515  : public MonoBehaviour_t3962482529
 {
 public:
+	// System.Int32 LevelManager::target
+	int32_t ___target_2;
 	// UnityEngine.SceneManagement.Scene LevelManager::currentScene
-	Scene_t2348375561  ___currentScene_2;
+	Scene_t2348375561  ___currentScene_3;
 	// UnityEngine.SceneManagement.SceneManager LevelManager::sceneManager
-	SceneManager_t2787271929 * ___sceneManager_3;
+	SceneManager_t2787271929 * ___sceneManager_4;
 	// UnityEngine.UI.Image LevelManager::whiteWipe
-	Image_t2670269651 * ___whiteWipe_4;
+	Image_t2670269651 * ___whiteWipe_5;
 	// ImageFill LevelManager::imageFill
-	ImageFill_t539633685 * ___imageFill_5;
+	ImageFill_t539633685 * ___imageFill_6;
 	// System.Boolean LevelManager::loading
-	bool ___loading_6;
+	bool ___loading_7;
 
 public:
-	inline static int32_t get_offset_of_currentScene_2() { return static_cast<int32_t>(offsetof(LevelManager_t4033906515, ___currentScene_2)); }
-	inline Scene_t2348375561  get_currentScene_2() const { return ___currentScene_2; }
-	inline Scene_t2348375561 * get_address_of_currentScene_2() { return &___currentScene_2; }
-	inline void set_currentScene_2(Scene_t2348375561  value)
+	inline static int32_t get_offset_of_target_2() { return static_cast<int32_t>(offsetof(LevelManager_t4033906515, ___target_2)); }
+	inline int32_t get_target_2() const { return ___target_2; }
+	inline int32_t* get_address_of_target_2() { return &___target_2; }
+	inline void set_target_2(int32_t value)
 	{
-		___currentScene_2 = value;
+		___target_2 = value;
 	}
 
-	inline static int32_t get_offset_of_sceneManager_3() { return static_cast<int32_t>(offsetof(LevelManager_t4033906515, ___sceneManager_3)); }
-	inline SceneManager_t2787271929 * get_sceneManager_3() const { return ___sceneManager_3; }
-	inline SceneManager_t2787271929 ** get_address_of_sceneManager_3() { return &___sceneManager_3; }
-	inline void set_sceneManager_3(SceneManager_t2787271929 * value)
+	inline static int32_t get_offset_of_currentScene_3() { return static_cast<int32_t>(offsetof(LevelManager_t4033906515, ___currentScene_3)); }
+	inline Scene_t2348375561  get_currentScene_3() const { return ___currentScene_3; }
+	inline Scene_t2348375561 * get_address_of_currentScene_3() { return &___currentScene_3; }
+	inline void set_currentScene_3(Scene_t2348375561  value)
 	{
-		___sceneManager_3 = value;
-		Il2CppCodeGenWriteBarrier((&___sceneManager_3), value);
+		___currentScene_3 = value;
 	}
 
-	inline static int32_t get_offset_of_whiteWipe_4() { return static_cast<int32_t>(offsetof(LevelManager_t4033906515, ___whiteWipe_4)); }
-	inline Image_t2670269651 * get_whiteWipe_4() const { return ___whiteWipe_4; }
-	inline Image_t2670269651 ** get_address_of_whiteWipe_4() { return &___whiteWipe_4; }
-	inline void set_whiteWipe_4(Image_t2670269651 * value)
+	inline static int32_t get_offset_of_sceneManager_4() { return static_cast<int32_t>(offsetof(LevelManager_t4033906515, ___sceneManager_4)); }
+	inline SceneManager_t2787271929 * get_sceneManager_4() const { return ___sceneManager_4; }
+	inline SceneManager_t2787271929 ** get_address_of_sceneManager_4() { return &___sceneManager_4; }
+	inline void set_sceneManager_4(SceneManager_t2787271929 * value)
 	{
-		___whiteWipe_4 = value;
-		Il2CppCodeGenWriteBarrier((&___whiteWipe_4), value);
+		___sceneManager_4 = value;
+		Il2CppCodeGenWriteBarrier((&___sceneManager_4), value);
 	}
 
-	inline static int32_t get_offset_of_imageFill_5() { return static_cast<int32_t>(offsetof(LevelManager_t4033906515, ___imageFill_5)); }
-	inline ImageFill_t539633685 * get_imageFill_5() const { return ___imageFill_5; }
-	inline ImageFill_t539633685 ** get_address_of_imageFill_5() { return &___imageFill_5; }
-	inline void set_imageFill_5(ImageFill_t539633685 * value)
+	inline static int32_t get_offset_of_whiteWipe_5() { return static_cast<int32_t>(offsetof(LevelManager_t4033906515, ___whiteWipe_5)); }
+	inline Image_t2670269651 * get_whiteWipe_5() const { return ___whiteWipe_5; }
+	inline Image_t2670269651 ** get_address_of_whiteWipe_5() { return &___whiteWipe_5; }
+	inline void set_whiteWipe_5(Image_t2670269651 * value)
 	{
-		___imageFill_5 = value;
-		Il2CppCodeGenWriteBarrier((&___imageFill_5), value);
+		___whiteWipe_5 = value;
+		Il2CppCodeGenWriteBarrier((&___whiteWipe_5), value);
 	}
 
-	inline static int32_t get_offset_of_loading_6() { return static_cast<int32_t>(offsetof(LevelManager_t4033906515, ___loading_6)); }
-	inline bool get_loading_6() const { return ___loading_6; }
-	inline bool* get_address_of_loading_6() { return &___loading_6; }
-	inline void set_loading_6(bool value)
+	inline static int32_t get_offset_of_imageFill_6() { return static_cast<int32_t>(offsetof(LevelManager_t4033906515, ___imageFill_6)); }
+	inline ImageFill_t539633685 * get_imageFill_6() const { return ___imageFill_6; }
+	inline ImageFill_t539633685 ** get_address_of_imageFill_6() { return &___imageFill_6; }
+	inline void set_imageFill_6(ImageFill_t539633685 * value)
 	{
-		___loading_6 = value;
+		___imageFill_6 = value;
+		Il2CppCodeGenWriteBarrier((&___imageFill_6), value);
+	}
+
+	inline static int32_t get_offset_of_loading_7() { return static_cast<int32_t>(offsetof(LevelManager_t4033906515, ___loading_7)); }
+	inline bool get_loading_7() const { return ___loading_7; }
+	inline bool* get_address_of_loading_7() { return &___loading_7; }
+	inline void set_loading_7(bool value)
+	{
+		___loading_7 = value;
 	}
 };
 
@@ -1704,8 +1715,17 @@ public:
 struct  ShipMovement_t2858865385  : public MonoBehaviour_t3962482529
 {
 public:
+	// System.Single ShipMovement::speed
+	float ___speed_2;
 
 public:
+	inline static int32_t get_offset_of_speed_2() { return static_cast<int32_t>(offsetof(ShipMovement_t2858865385, ___speed_2)); }
+	inline float get_speed_2() const { return ___speed_2; }
+	inline float* get_address_of_speed_2() { return &___speed_2; }
+	inline void set_speed_2(float value)
+	{
+		___speed_2 = value;
+	}
 };
 
 #ifdef __clang__
@@ -2324,6 +2344,12 @@ extern "C"  void Image_set_fillAmount_m3737925590 (Image_t2670269651 * __this, f
 extern "C"  float Image_get_fillAmount_m2193224718 (Image_t2670269651 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void LevelManager::loadDefender()
 extern "C"  void LevelManager_loadDefender_m3558971923 (LevelManager_t4033906515 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.QualitySettings::set_vSyncCount(System.Int32)
+extern "C"  void QualitySettings_set_vSyncCount_m3131636076 (RuntimeObject * __this /* static, unused */, int32_t p0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Application::set_targetFrameRate(System.Int32)
+extern "C"  void Application_set_targetFrameRate_m3682352535 (RuntimeObject * __this /* static, unused */, int32_t p0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// System.Int32 UnityEngine.Application::get_targetFrameRate()
+extern "C"  int32_t Application_get_targetFrameRate_m1077623221 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.SceneManagement.SceneManager::LoadScene(System.String)
 extern "C"  void SceneManager_LoadScene_m1758133949 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void LevelManager::loadLevel(System.String)
@@ -2336,8 +2362,12 @@ extern "C"  void ShipMovement_MoveRight_m1160561712 (ShipMovement_t2858865385 * 
 extern "C"  bool Input_GetKey_m3736388334 (RuntimeObject * __this /* static, unused */, int32_t p0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Transform::get_position()
 extern "C"  Vector3_t3722313464  Transform_get_position_m36019626 (Transform_t3600365921 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Vector3::op_Subtraction(UnityEngine.Vector3,UnityEngine.Vector3)
+extern "C"  Vector3_t3722313464  Vector3_op_Subtraction_m3073674971 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  p0, Vector3_t3722313464  p1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::set_position(UnityEngine.Vector3)
 extern "C"  void Transform_set_position_m3387557959 (Transform_t3600365921 * __this, Vector3_t3722313464  p0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Vector3::op_Addition(UnityEngine.Vector3,UnityEngine.Vector3)
+extern "C"  Vector3_t3722313464  Vector3_op_Addition_m779775034 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  p0, Vector3_t3722313464  p1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -2572,7 +2602,7 @@ extern "C"  void ImageFill_Update_m2595966541 (ImageFill_t539633685 * __this, co
 {
 	{
 		LevelManager_t4033906515 * L_0 = __this->get_levelManager_6();
-		bool L_1 = L_0->get_loading_6();
+		bool L_1 = L_0->get_loading_7();
 		if (!L_1)
 		{
 			goto IL_009c;
@@ -2634,7 +2664,18 @@ IL_009c:
 extern "C"  void LevelManager__ctor_m1695469538 (LevelManager_t4033906515 * __this, const RuntimeMethod* method)
 {
 	{
+		__this->set_target_2(((int32_t)60));
 		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void LevelManager::Awake()
+extern "C"  void LevelManager_Awake_m2824870717 (LevelManager_t4033906515 * __this, const RuntimeMethod* method)
+{
+	{
+		QualitySettings_set_vSyncCount_m3131636076(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
+		int32_t L_0 = __this->get_target_2();
+		Application_set_targetFrameRate_m3682352535(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -2642,14 +2683,30 @@ extern "C"  void LevelManager__ctor_m1695469538 (LevelManager_t4033906515 * __th
 extern "C"  void LevelManager_Start_m2992410788 (LevelManager_t4033906515 * __this, const RuntimeMethod* method)
 {
 	{
+		Application_set_targetFrameRate_m3682352535(NULL /*static, unused*/, ((int32_t)60), /*hidden argument*/NULL);
+		QualitySettings_set_vSyncCount_m3131636076(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
 		Scene_t2348375561  L_0 = SceneManager_GetActiveScene_m1825203488(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_currentScene_2(L_0);
+		__this->set_currentScene_3(L_0);
 		return;
 	}
 }
 // System.Void LevelManager::Update()
 extern "C"  void LevelManager_Update_m2310896440 (LevelManager_t4033906515 * __this, const RuntimeMethod* method)
 {
+	{
+		int32_t L_0 = Application_get_targetFrameRate_m1077623221(NULL /*static, unused*/, /*hidden argument*/NULL);
+		int32_t L_1 = __this->get_target_2();
+		if ((((int32_t)L_0) == ((int32_t)L_1)))
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		int32_t L_2 = __this->get_target_2();
+		Application_set_targetFrameRate_m3682352535(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+	}
+
+IL_001b:
 	{
 		return;
 	}
@@ -2673,7 +2730,7 @@ extern "C"  void LevelManager_loadDefender_m3558971923 (LevelManager_t4033906515
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		LevelManager_loadLevel_m312827559(__this, _stringLiteral1708937216, /*hidden argument*/NULL);
+		LevelManager_loadLevel_m312827559(__this, _stringLiteral62725266, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -2681,7 +2738,7 @@ extern "C"  void LevelManager_loadDefender_m3558971923 (LevelManager_t4033906515
 extern "C"  void LevelManager_setLoadingActive_m1467375217 (LevelManager_t4033906515 * __this, const RuntimeMethod* method)
 {
 	{
-		__this->set_loading_6((bool)1);
+		__this->set_loading_7((bool)1);
 		return;
 	}
 }
@@ -2697,6 +2754,7 @@ extern "C"  void LevelManager_setLoadingActive_m1467375217 (LevelManager_t403390
 extern "C"  void ShipMovement__ctor_m1312382108 (ShipMovement_t2858865385 * __this, const RuntimeMethod* method)
 {
 	{
+		__this->set_speed_2((2.0f));
 		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -2726,29 +2784,29 @@ extern "C"  void ShipMovement_MoveLeft_m2385436365 (ShipMovement_t2858865385 * _
 		il2cpp_codegen_initialize_method (ShipMovement_MoveLeft_m2385436365_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	Vector3_t3722313464  V_0;
-	memset(&V_0, 0, sizeof(V_0));
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
 		bool L_0 = Input_GetKey_m3736388334(NULL /*static, unused*/, ((int32_t)276), /*hidden argument*/NULL);
 		if (!L_0)
 		{
-			goto IL_0042;
+			goto IL_0040;
 		}
 	}
 	{
 		Transform_t3600365921 * L_1 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
-		Transform_t3600365921 * L_2 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
+		Transform_t3600365921 * L_2 = L_1;
 		Vector3_t3722313464  L_3 = Transform_get_position_m36019626(L_2, /*hidden argument*/NULL);
-		V_0 = L_3;
-		float L_4 = (&V_0)->get_x_1();
-		Vector3_t3722313464  L_5;
-		memset(&L_5, 0, sizeof(L_5));
-		Vector3__ctor_m3353183577((&L_5), ((float)il2cpp_codegen_subtract((float)L_4, (float)(0.2f))), (-4.0f), (0.0f), /*hidden argument*/NULL);
-		Transform_set_position_m3387557959(L_1, L_5, /*hidden argument*/NULL);
+		float L_4 = __this->get_speed_2();
+		float L_5 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Vector3_t3722313464  L_6;
+		memset(&L_6, 0, sizeof(L_6));
+		Vector3__ctor_m3353183577((&L_6), ((float)il2cpp_codegen_multiply((float)L_4, (float)L_5)), (0.0f), (0.0f), /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
+		Vector3_t3722313464  L_7 = Vector3_op_Subtraction_m3073674971(NULL /*static, unused*/, L_3, L_6, /*hidden argument*/NULL);
+		Transform_set_position_m3387557959(L_2, L_7, /*hidden argument*/NULL);
 	}
 
-IL_0042:
+IL_0040:
 	{
 		return;
 	}
@@ -2762,29 +2820,29 @@ extern "C"  void ShipMovement_MoveRight_m1160561712 (ShipMovement_t2858865385 * 
 		il2cpp_codegen_initialize_method (ShipMovement_MoveRight_m1160561712_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	Vector3_t3722313464  V_0;
-	memset(&V_0, 0, sizeof(V_0));
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
 		bool L_0 = Input_GetKey_m3736388334(NULL /*static, unused*/, ((int32_t)275), /*hidden argument*/NULL);
 		if (!L_0)
 		{
-			goto IL_0042;
+			goto IL_0040;
 		}
 	}
 	{
 		Transform_t3600365921 * L_1 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
-		Transform_t3600365921 * L_2 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
+		Transform_t3600365921 * L_2 = L_1;
 		Vector3_t3722313464  L_3 = Transform_get_position_m36019626(L_2, /*hidden argument*/NULL);
-		V_0 = L_3;
-		float L_4 = (&V_0)->get_x_1();
-		Vector3_t3722313464  L_5;
-		memset(&L_5, 0, sizeof(L_5));
-		Vector3__ctor_m3353183577((&L_5), ((float)il2cpp_codegen_add((float)L_4, (float)(0.2f))), (-4.0f), (0.0f), /*hidden argument*/NULL);
-		Transform_set_position_m3387557959(L_1, L_5, /*hidden argument*/NULL);
+		float L_4 = __this->get_speed_2();
+		float L_5 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Vector3_t3722313464  L_6;
+		memset(&L_6, 0, sizeof(L_6));
+		Vector3__ctor_m3353183577((&L_6), ((float)il2cpp_codegen_multiply((float)L_4, (float)L_5)), (0.0f), (0.0f), /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
+		Vector3_t3722313464  L_7 = Vector3_op_Addition_m779775034(NULL /*static, unused*/, L_3, L_6, /*hidden argument*/NULL);
+		Transform_set_position_m3387557959(L_2, L_7, /*hidden argument*/NULL);
 	}
 
-IL_0042:
+IL_0040:
 	{
 		return;
 	}

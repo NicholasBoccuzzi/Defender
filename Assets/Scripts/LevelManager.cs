@@ -6,22 +6,31 @@ using UnityEngine.UI;
 
 
 public class LevelManager : MonoBehaviour {
-
+    
+	public int target = 60;
 	private Scene currentScene;
 	private SceneManager sceneManager;
 	private Image whiteWipe;
 	private ImageFill imageFill;
 	public bool loading;
 
+	void Awake()
+	{
+		QualitySettings.vSyncCount = 0;
+		Application.targetFrameRate = target;
+	}
 
 	// Use this for initialization
 	void Start () {
+		Application.targetFrameRate = 60;
+		QualitySettings.vSyncCount = 0;
 		currentScene = SceneManager.GetActiveScene();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        if(Application.targetFrameRate != target)
+              Application.targetFrameRate = target;
 	}
 
 	void loadLevel (string name) {
