@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class LevelManager : MonoBehaviour {
 
 	private Scene currentScene;
 	private SceneManager sceneManager;
+	private Image whiteWipe;
+	private ImageFill imageFill;
+	public bool loading;
+
 
 	// Use this for initialization
 	void Start () {
@@ -29,9 +34,14 @@ public class LevelManager : MonoBehaviour {
 	// }
 
 	public void loadDefender() {
-		print("hello");
-		loadLevel("Level_01");		
+			loadLevel("Game");		
 	}
+
+	// sets loading to active so that ImageFill can wipescreen then call LoadDefender;
+	public void setLoadingActive () {
+		loading = true;
+	}
+
 
 
 }
