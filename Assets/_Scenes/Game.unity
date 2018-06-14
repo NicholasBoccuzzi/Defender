@@ -319,6 +319,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b88bc5f9698f40f89135487499972e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 1211101657399440, guid: 1fb4b9931a961401b94787f5fee2bea2, type: 2}
+  - {fileID: 1794356090285066, guid: e88f5d8af9dcf41c48df14b046078834, type: 2}
   width: 4.09
   height: 5.97
   moveLeft: 1

@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 
 public class EnemySpawner : MonoBehaviour {
+	public List<GameObject> enemies;
 	private GameObject enemy;
 	private int x = 0;
 	public float width = 10f;
@@ -32,14 +32,13 @@ public class EnemySpawner : MonoBehaviour {
 		// Get 'enemy' out of Instantiate by setting 'GameObject enemy' (declared above) = the instantiation below, but must instantiate 'as' a GameObject (seen below).
 		
 		// for each being used to equip each position with an instance of an enemy.
-		int count = 1;
+		int count = 0;
 		foreach( Transform child in transform) {
-			if (count == 1) {
-				generateEnemy("Assets/Entities/King.prefab", child);
+			if (count == 0) {
+				generateEnemy(count, child);
 				count += 1;
 			} else {
-				generateEnemy("Assets/Entities/Pawn.prefab", child);
-				count += 1;				
+				generateEnemy(1, child);
 			}
 		}
 	}
@@ -54,8 +53,8 @@ public class EnemySpawner : MonoBehaviour {
 		checkPosition();
 	}
 
-	void generateEnemy(string path, Transform child) {
-		enemy = Instantiate(AssetDatabase.LoadAssetAtPath(path, typeof(GameObject)), child.transform.position, Quaternion.identity) as GameObject;
+	void generateEnemy(int index, Transform child) {
+		enemy = Instantiate(enemies[index], child.transform.position, Quaternion.identity) as GameObject;
 		enemy.transform.parent = child;
 	}
 

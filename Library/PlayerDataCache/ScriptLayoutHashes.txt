@@ -2,8 +2,8 @@ WebGL
 PlayerPath?
 /Users/NickyB/Desktop/gameProjects/unity2D/Defender/DefenderDemo
 SceneListBegin?
-Assets/Scenes/MainMenu.unity
-Assets/Scenes/Game.unity
+Assets/_Scenes/MainMenu.unity
+Assets/_Scenes/Game.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 cf455f7a806648c6ed4c7d3e3f8a0e03 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -115,8 +115,10 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AudioFadeOut
+e887fb50f00ebb0020099be95da0dbdc Assembly-CSharp.dll:.AudioPlayer
 b05f47680226c2a12fcb2f43a913343e Assembly-CSharp.dll:.Fading
-7a8ecd9e52fcb19e48524d9c5d53ea52 Assembly-CSharp.dll:.LevelManager
+63099964c60f08fd0e0d3cc808501cda Assembly-CSharp.dll:.LevelManager
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -149,5 +151,6 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-e887fb50f00ebb0020099be95da0dbdc Assembly-CSharp.dll:.HandleAudio
-dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.ShipMovement
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Position
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ShipMovement
+09552ddaf6cdf7480579cf1dc988edf8 Assembly-CSharp.dll:.EnemySpawner
