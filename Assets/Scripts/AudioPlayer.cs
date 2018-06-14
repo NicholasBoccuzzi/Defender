@@ -7,7 +7,7 @@ public class AudioPlayer : MonoBehaviour {
 
 	private Scene currentScene;
 	private GameObject title;
-	private AudioSource audio;
+	private AudioSource audioplayer;
 	public AudioClip[] audioClips;
 	private LevelManager levelManager;
 	static AudioPlayer instance = null;
@@ -29,16 +29,16 @@ public class AudioPlayer : MonoBehaviour {
 
 		if (currentScene.name == "MainMenu") {
 			title = GameObject.FindGameObjectWithTag("Title");
-			audio = GameObject.FindObjectOfType<AudioSource>();
+			audioplayer = GameObject.FindObjectOfType<AudioSource>();
 		}
 	}
 
 	public void playMenuHover() {
-		audio.PlayOneShot(audioClips[0]);
+		audioplayer.PlayOneShot(audioClips[0]);
 	}
 
 	public void playGameStart() {
-		audio.PlayOneShot(audioClips[1]);
+		audioplayer.PlayOneShot(audioClips[1]);
 	}
 
 	public static IEnumerator FadeOut (AudioSource audioSource, float FadeTime) {

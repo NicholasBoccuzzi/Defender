@@ -55,7 +55,6 @@
      <Compile Include="Assets\Scripts\AudioPlayer.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Fading.cs" />
-     <Compile Include="Assets\Scripts\HandleAudio.cs" />
      <Compile Include="Assets\Scripts\ImageFill.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Position.cs" />

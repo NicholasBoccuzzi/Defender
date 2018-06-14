@@ -15,7 +15,7 @@ public class ShipMovement : MonoBehaviour {
 		// finding the right distance to each side of the camera.
 		float distance = transform.position.z - Camera.main.transform.position.z;
 		Vector3 leftmost = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, distance));
-		Vector2 rightmost = Camera.main.ViewportToWorldPoint(new Vector3 (1, 0, distance));
+		Vector3 rightmost = Camera.main.ViewportToWorldPoint(new Vector3 (1, 0, distance));
 
 		xmin = leftmost.x + padding;
 		xmax = rightmost.x - padding;
