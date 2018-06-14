@@ -9,11 +9,12 @@ public class ImageFill : MonoBehaviour {
 	private bool started;
     private float waitTime = 2.0f;
 	private LevelManager levelManager;
+	private AudioSource audioplayer;
 
 	void Start() {
 		whiteWipe = gameObject.GetComponent<Image>();
 		levelManager = GameObject.FindObjectOfType<LevelManager>();
-		
+		audioplayer = GameObject.FindObjectOfType<AudioSource>();
 	}
     // Update is called once per frame
     void Update()
@@ -28,6 +29,7 @@ public class ImageFill : MonoBehaviour {
 			whiteWipe.fillAmount += 1.0f / waitTime * Time.deltaTime;
 			if (whiteWipe.fillAmount == 1.0f) {
 				complete = true;
+
 				levelManager.loadDefender();
 			}
 		}

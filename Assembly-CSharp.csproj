@@ -51,7 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\AudioFadeOut.cs" />
+     <Compile Include="Assets\Scripts\AudioPlayer.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Fading.cs" />
      <Compile Include="Assets\Scripts\HandleAudio.cs" />
      <Compile Include="Assets\Scripts\ImageFill.cs" />

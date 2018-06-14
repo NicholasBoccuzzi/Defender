@@ -10,6 +10,17 @@ public class HandleAudio : MonoBehaviour {
 	private AudioSource audio;
 	public AudioClip[] audioClips;
 	private LevelManager levelManager;
+	static HandleAudio instance = null;
+
+	void Awake() {
+		if (instance != null) {
+			Destroy(gameObject);
+		} else {
+			instance = this;
+			GameObject.DontDestroyOnLoad(gameObject);
+		}
+	}
+
 
 	// Use this for initialization
 	void Start () {
@@ -27,5 +38,19 @@ public class HandleAudio : MonoBehaviour {
 	public void playMenuHover() {
 		audio.PlayOneShot(audioClips[0]);
 	}
+
+	public static IEnumerator FadeOut (AudioSource audioSource, float FadeTime) {
+        float startVolume = audioSource.volume;
+ 
+        while (audioSource.volume > 0) {
+            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+ 
+            yield return null;
+        }
+ 
+        audioSource.Stop ();
+        audioSource.volume = startVolume;
+    }
+
 
 }

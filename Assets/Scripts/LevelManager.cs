@@ -12,7 +12,9 @@ public class LevelManager : MonoBehaviour {
 	private SceneManager sceneManager;
 	private Image whiteWipe;
 	private ImageFill imageFill;
+	private bool fadingOut;
 	public bool loading;
+	public AudioSource audioplayer;
 
 	void Awake()
 	{
@@ -25,12 +27,25 @@ public class LevelManager : MonoBehaviour {
 		Application.targetFrameRate = 60;
 		QualitySettings.vSyncCount = 0;
 		currentScene = SceneManager.GetActiveScene();
+
+		if (currentScene.name == "Game") {
+			audioplayer = AudioSource.FindObjectOfType<AudioSource>();
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if(Application.targetFrameRate != target)
+        if(Application.targetFrameRate != target) {
               Application.targetFrameRate = target;
+		}
+
+		if (currentScene.name == "Game") {
+			if (audioplayer != null) {
+				StartCoroutine (AudioPlayer.FadeOut(audioplayer, 10.0f));
+				audioplayer = null;
+			}
+		}
+		
 	}
 
 	void loadLevel (string name) {
@@ -43,7 +58,7 @@ public class LevelManager : MonoBehaviour {
 	// }
 
 	public void loadDefender() {
-			loadLevel("Game");		
+		loadLevel("Game");
 	}
 
 	// sets loading to active so that ImageFill can wipescreen then call LoadDefender;
