@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShipMovement : MonoBehaviour {
 
+	public GameObject bullet;
 	private float speed = 20.0f;
 	private float padding = .2f;
 	float xmin;
@@ -25,6 +26,7 @@ public class ShipMovement : MonoBehaviour {
 	void Update () {
 		MoveLeft();
 		MoveRight();
+		checkFire();
 
 		// restrict player to playspace		
 		float newX = Mathf.Clamp(transform.position.x, xmin, xmax);
@@ -42,6 +44,12 @@ public class ShipMovement : MonoBehaviour {
 		if (Input.GetKey(KeyCode.RightArrow)) {
 			transform.position += new Vector3(speed * Time.deltaTime, 0.0f, 0.0f);
 			// can also use transform.position += Vector3.right * speed * Time.deltaTime;
+		}
+	}
+
+	void checkFire() {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			GameObject.Instantiate(bullet, transform.position ,Quaternion.identity);
 		}
 	}
 

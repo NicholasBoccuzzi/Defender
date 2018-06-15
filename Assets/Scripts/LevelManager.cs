@@ -48,8 +48,8 @@ public class LevelManager : MonoBehaviour {
 		
 	}
 
-	void loadLevel (string name) {
-		SceneManager.LoadScene(name);
+	void loadLevel (string sceneName) {
+		SceneManager.LoadScene(sceneName);
 	}
 
 	// IEnumerator fadeInDefender() {
