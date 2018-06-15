@@ -49,7 +49,8 @@ public class ShipMovement : MonoBehaviour {
 
 	void checkFire() {
 		if (Input.GetKeyDown(KeyCode.Space)) {
-			GameObject.Instantiate(bullet, transform.position ,Quaternion.identity);
+			GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
+			newBullet.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, 10f, 0f);
 		}
 	}
 

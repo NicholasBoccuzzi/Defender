@@ -11,11 +11,12 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		moveUp();
 	}
 
 	void moveUp() {
-		transform.position = transform.position + new Vector3(0, 1f * Time.deltaTime, 0);
+	}
+
+	void OnCollisionEnter2D(Collision2D col) {
 	}
 
 }

@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4253334988528518}
   - component: {fileID: 212717977470299542}
+  - component: {fileID: 60111842413306742}
   m_Layer: 0
   m_Name: Pawn
   m_TagString: Untagged
@@ -34,12 +35,48 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1794356090285066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.6968946, y: -1.277294, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60111842413306742
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1794356090285066}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.062249184, y: 0.039877772}
+      - {x: -0.062249184, y: 0.039877832}
+      - {x: -0.060880423, y: 0.03562343}
+      - {x: -0.062005043, y: -0.011246622}
+      - {x: -0.062004805, y: -0.043129683}
+      - {x: -0.025443554, y: -0.042342663}
+      - {x: -0.025476456, y: -0.0037656426}
+      - {x: 0.024716139, y: -0.003367126}
+      - {x: 0.025372505, y: -0.044912994}
+      - {x: 0.062005043, y: -0.04562342}
+      - {x: 0.062004805, y: -0.005623162}
+      - {x: 0.062004805, y: -0.04535407}
 --- !u!212 &212717977470299542
 SpriteRenderer:
   m_ObjectHideFlags: 1
