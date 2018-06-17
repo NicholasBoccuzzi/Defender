@@ -57,7 +57,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -107,6 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f1f298a0d6449c4a1fe1180b8a0c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioclips:
+  - {fileID: 8300000, guid: 1214668ebbb6f489c828e936a38372b8, type: 3}
 --- !u!212 &212332558832625036
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -26,7 +26,14 @@ public class ShipMovement : MonoBehaviour {
 	void Update () {
 		MoveLeft();
 		MoveRight();
-		checkFire();
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			InvokeRepeating("fire", 0.000001f, .2f);
+		}
+
+		if (Input.GetKeyUp(KeyCode.Space)){
+			CancelInvoke("fire");
+		}
+			
 
 		// restrict player to playspace		
 		float newX = Mathf.Clamp(transform.position.x, xmin, xmax);
@@ -47,11 +54,12 @@ public class ShipMovement : MonoBehaviour {
 		}
 	}
 
-	void checkFire() {
-		if (Input.GetKeyDown(KeyCode.Space)) {
+	void fire() {
 			GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
 			newBullet.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, 10f, 0f);
-		}
+	}
+
+	void cancelFire() {
 	}
 
 }
