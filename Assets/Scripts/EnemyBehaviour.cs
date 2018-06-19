@@ -3,12 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour {
+	private int health; 
 
 	void Start () {
-		Debug.Log(this.tag);
+		if (this.tag == "Pawn") {
+			health = 1;
+		} else if (this.tag == "King") {
+			health = 2;
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
-		Destroy(this.gameObject);
+		health -=1 ;
+
+		if (health <= 0) {
+			Destroy(this.gameObject);
+		}
 	}
 }
