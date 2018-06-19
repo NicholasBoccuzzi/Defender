@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Title
   - WhiteWipe
+  - King
+  - Pawn
   layers:
   - Default
   - TransparentFX

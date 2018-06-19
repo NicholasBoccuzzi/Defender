@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4253334988528518}
   - component: {fileID: 212717977470299542}
   - component: {fileID: 60111842413306742}
+  - component: {fileID: 114616493796311492}
   m_Layer: 0
   m_Name: Pawn
-  m_TagString: Untagged
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,7 +51,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -77,6 +78,17 @@ PolygonCollider2D:
       - {x: 0.062005043, y: -0.04562342}
       - {x: 0.062004805, y: -0.005623162}
       - {x: 0.062004805, y: -0.04535407}
+--- !u!114 &114616493796311492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1794356090285066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb78e930ccd54c19a368868a4616fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212717977470299542
 SpriteRenderer:
   m_ObjectHideFlags: 1
