@@ -26,12 +26,18 @@ public class ShipMovement : MonoBehaviour {
 	void Update () {
 		MoveLeft();
 		MoveRight();
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			InvokeRepeating("fire", 0.000001f, .2f);
-		}
 
-		if (Input.GetKeyUp(KeyCode.Space)){
-			CancelInvoke("fire");
+		// Below can be used if I want to allow holding down space for the ship to continuously fire
+		// if (Input.GetKeyDown(KeyCode.Space)) {
+		// 	InvokeRepeating("fire", 0.000001f, .2f);
+		// }
+
+		// if (Input.GetKeyUp(KeyCode.Space)){
+		// 	CancelInvoke("fire");
+		// }
+
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			fire();
 		}
 			
 

@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour {
-	private GameObject soundEffectGameObject;
-	public AudioClip[] audioclips;
+	private AudioSource bulletAudio;
+	public AudioClip[] bulletClips;
 
 	// Use this for initialization
+
+	void Awake() {
+		bulletAudio = gameObject.GetComponent<AudioSource>();
+	}
+
 	void Start () {
-		soundEffectGameObject = GameObject.Find("SoundEffects"); 
+		bulletAudio.PlayOneShot(bulletClips[0]);
 	}
 	
 	// Update is called once per frame

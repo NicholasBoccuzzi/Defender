@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour {
-	private int health; 
+	private int health;
+	private AudioSource enemyAudioPlayer;
+	public AudioClip[] enemyAudioClips;
+
+
 
 	void Start () {
+		enemyAudioPlayer = gameObject.GetComponent<AudioSource>();
+
 		if (this.tag == "Pawn") {
 			health = 1;
 		} else if (this.tag == "King") {
@@ -17,7 +23,14 @@ public class EnemyBehaviour : MonoBehaviour {
 		health -=1 ;
 
 		if (health <= 0) {
-			Destroy(this.gameObject);
+			enemyAudioPlayer.PlayOneShot(enemyAudioClips[0]);
+			gameObject.GetComponent<SpriteRenderer>().enabled = false;
+			gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+			Object.Destroy(this.gameObject, 2.0f);
+		} else {
+			enemyAudioPlayer.PlayOneShot(enemyAudioClips[1]);
 		}
 	}
+
+	
 }
