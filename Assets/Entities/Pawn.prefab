@@ -187,6 +187,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAudioClips:
   - {fileID: 8300000, guid: 314d205cabe1e4aaa9a29d4e76ff0ea5, type: 3}
+  timeBetween: 0
+  bullet: {fileID: 1532341910441158, guid: e6b0642f540e348a48c2b99bc5075f14, type: 2}
 --- !u!212 &212717977470299542
 SpriteRenderer:
   m_ObjectHideFlags: 1

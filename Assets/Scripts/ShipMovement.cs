@@ -68,4 +68,11 @@ public class ShipMovement : MonoBehaviour {
 	void cancelFire() {
 	}
 
+	void OnTriggerEnter2D(Collider2D collider) {
+		if (collider.GetComponent<Bullet>().enemyBullet == true) {
+			Destroy(this.gameObject);
+			Destroy(collider.gameObject);
+		}
+	}
+
 }

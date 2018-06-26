@@ -25,7 +25,11 @@ public class Bullet : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col) {
-		Destroy(this.gameObject);
+		if (this.enemyBullet) {
+			if (col.tag != "Pawn" && col.tag != "King") {
+				Destroy(this.gameObject);
+			}
+		};
 	}
 
 

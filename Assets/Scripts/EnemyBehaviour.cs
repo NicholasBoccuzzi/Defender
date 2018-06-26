@@ -6,12 +6,13 @@ public class EnemyBehaviour : MonoBehaviour {
 	private int health;
 	private AudioSource enemyAudioPlayer;
 	public AudioClip[] enemyAudioClips;
-	public float timeBetween = 0.0f;
+	public float timeBetween;
 	public GameObject bullet;
 
 
 
 	void Start () {
+		timeBetween = (Random.value * 2);
 		enemyAudioPlayer = gameObject.GetComponent<AudioSource>();
 
 		if (this.tag == "Pawn") {
@@ -28,11 +29,11 @@ public class EnemyBehaviour : MonoBehaviour {
 	void updateTime() {
 		timeBetween += Time.deltaTime;
 
-		if (timeBetween >= 3) {
+		if (timeBetween >= 5.0f) {
 			GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
 			newBullet.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, -10f, 0f);
 			newBullet.GetComponent<Bullet>().enemyBullet = true;
-			timeBetween = 0;
+			timeBetween = (Random.value * 2);
 		} 
 	}
 
