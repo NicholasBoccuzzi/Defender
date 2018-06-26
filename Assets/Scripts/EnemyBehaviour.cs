@@ -7,6 +7,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	private AudioSource enemyAudioPlayer;
 	public AudioClip[] enemyAudioClips;
 	public float timeBetween;
+	private bool dead = false; 
 	public GameObject bullet;
 
 
@@ -29,11 +30,11 @@ public class EnemyBehaviour : MonoBehaviour {
 	void updateTime() {
 		timeBetween += Time.deltaTime;
 
-		if (timeBetween >= 5.0f) {
+		if (timeBetween >= 3.0f && !this.dead) {
 			GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
 			newBullet.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, -10f, 0f);
 			newBullet.GetComponent<Bullet>().enemyBullet = true;
-			timeBetween = (Random.value * 2);
+			timeBetween = (Random.value * 3);
 		} 
 	}
 
@@ -41,6 +42,7 @@ public class EnemyBehaviour : MonoBehaviour {
 		if (collider.GetComponent<Bullet>().enemyBullet == false) {
 			health -=1 ;
 			if (health <= 0) {
+				this.dead = true;
 				enemyAudioPlayer.PlayOneShot(enemyAudioClips[0]);
 				gameObject.GetComponent<SpriteRenderer>().enabled = false;
 				gameObject.GetComponent<PolygonCollider2D>().enabled = false;
