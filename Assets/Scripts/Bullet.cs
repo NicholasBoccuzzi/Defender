@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 	private AudioSource bulletAudio;
+	public bool enemyBullet = false;
 	public AudioClip[] bulletClips;
 
 	// Use this for initialization
