@@ -14,7 +14,6 @@ public class EnemySpawner : MonoBehaviour {
 	float xmax;
 	float padding = 1.2f;
 	public bool moveLeft = true;
-	private int personalCount;
 
 
 
@@ -40,11 +39,10 @@ public class EnemySpawner : MonoBehaviour {
 		int count = 0;
 		foreach( Transform child in transform) {
 			if (count == 0) {
-				generateEnemy(count, child);
+				generateEnemy(count, child, count);
 				count += 1;
 			} else {
-				generateEnemy(1, child);
-				this.personalCount = count;
+				generateEnemy(1, child, count);
 				count+= 1;
 			}
 		}
@@ -61,8 +59,9 @@ public class EnemySpawner : MonoBehaviour {
 			checkPosition();
 	}
 
-	void generateEnemy(int index, Transform child) {
+	void generateEnemy(int index, Transform child, int count) {
 		enemy = Instantiate(enemies[index], child.transform.position, Quaternion.identity) as GameObject;
+		enemy.GetComponent<EnemyBehaviour>().personalCount = count;
 		enemy.transform.parent = child;
 	}
 

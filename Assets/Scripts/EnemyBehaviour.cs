@@ -14,12 +14,13 @@ public class EnemyBehaviour : MonoBehaviour {
 	private float RotateSpeed = 5f;
 	private float Radius = 1f;
 	private float _angle;
+	public int personalCount;
 
 	void Start () {
 		centerPointRef = GameObject.FindGameObjectWithTag("King");
 		timeBetween = (Random.value * 2);
 		enemyAudioPlayer = gameObject.GetComponent<AudioSource>();
-
+		
 		if (this.tag == "Pawn") {
 			health = 1;
 		} else if (this.tag == "King") {
