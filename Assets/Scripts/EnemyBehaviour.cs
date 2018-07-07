@@ -15,12 +15,10 @@ public class EnemyBehaviour : MonoBehaviour {
 	private float Radius = 1f;
 	private float _angle;
 
-
-
 	void Start () {
+		centerPointRef = GameObject.FindGameObjectWithTag("King");
 		timeBetween = (Random.value * 2);
 		enemyAudioPlayer = gameObject.GetComponent<AudioSource>();
-		centerPointRef = GameObject.FindGameObjectWithTag("King");
 
 		if (this.tag == "Pawn") {
 			health = 1;
@@ -31,10 +29,7 @@ public class EnemyBehaviour : MonoBehaviour {
 
 	void Update () {
 		updateTime();
-		centerPoint = centerPointRef.transform.position;
-		if (this.tag != "King") {
-			CircularRotate();
-		}
+		CircularRotate();
 	}
 
 	void updateTime() {
@@ -48,12 +43,16 @@ public class EnemyBehaviour : MonoBehaviour {
 		} 
 	}
 
+	
 	void CircularRotate() {
+		centerPoint = centerPointRef.transform.position;
          _angle += RotateSpeed * Time.deltaTime;
  
          var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius;
-         transform.position = centerPoint - new Vector2(this.transform.position.x, this.transform.position.y) + offset;
+         transform.position = centerPoint + offset;
 	}
+
+
 
 	void OnTriggerEnter2D(Collider2D collider) {
 		if (collider.GetComponent<Bullet>().enemyBullet == false) {

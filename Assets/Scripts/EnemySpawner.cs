@@ -14,7 +14,12 @@ public class EnemySpawner : MonoBehaviour {
 	float xmax;
 	float padding = 1.2f;
 	public bool moveLeft = true;
+	private int personalCount;
 
+
+
+	void Awake () {
+	}
 	
 
 	// Use this for initialization
@@ -39,8 +44,11 @@ public class EnemySpawner : MonoBehaviour {
 				count += 1;
 			} else {
 				generateEnemy(1, child);
+				this.personalCount = count;
+				count+= 1;
 			}
 		}
+
 	}
 
 	public void OnDrawGizmos(){
@@ -49,8 +57,8 @@ public class EnemySpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		moveEnemyGroup();
-		checkPosition();
+			moveEnemyGroup();
+			checkPosition();
 	}
 
 	void generateEnemy(int index, Transform child) {
