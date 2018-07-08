@@ -34,7 +34,10 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	void Update () {
-		updateTime();
+		
+		if (Time.deltaTime > 2.0f) {
+			updateTime();
+		}
 		if (centerPointRef) {
 			CircularRotate();
 		}
