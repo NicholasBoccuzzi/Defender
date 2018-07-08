@@ -11,17 +11,19 @@ public class EnemyBehaviour : MonoBehaviour {
 	public GameObject bullet;
 	private GameObject centerPointRef;
 	private Vector2 centerPoint;
-	private float RotateSpeed = .0001f;
+	private Rigidbody2D rigid;
+	private float RotateSpeed = 5f;
 	private float Radius = 1f;
 	private float _angle;
-	private Vector2 offset;
 	public int personalCount;
 
 	void Start () {
 		centerPointRef = GameObject.FindGameObjectWithTag("King");
 		timeBetween = (Random.value * 2);
 		enemyAudioPlayer = gameObject.GetComponent<AudioSource>();
-		
+		rigid = GetComponent<Rigidbody2D>();
+		rigid.freezeRotation = true;
+
 		if (this.tag == "Pawn") {
 			health = 1;
 		} else if (this.tag == "King") {
@@ -53,20 +55,16 @@ public class EnemyBehaviour : MonoBehaviour {
 	void CircularRotate() {
 		if (this.tag != "King"){
 			centerPoint = centerPointRef.transform.position;
-			_angle += RotateSpeed * Time.deltaTime;
-
-			if (personalCount == 1) {
-				offset = (new Vector2(Mathf.Sin(_angle - 1), Mathf.Cos(_angle)) * Radius);
-			} else if (personalCount == 2) {
-				offset = (new Vector2(Mathf.Sin(_angle - 1), Mathf.Cos(_angle - 1)) * Radius);
-			} else if (personalCount == 3) {
-				offset = (new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle - 1)) * Radius);
-			} else if (personalCount == 4) {
-				offset = (new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius);
-			}
+			// _angle += RotateSpeed * Time.deltaTime;
 	
-			transform.position = centerPoint + offset;
+			// var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius;
+			transform.RotateAround(centerPoint, new Vector3(0, 0, RotateSpeed), 100*Time.deltaTime);
+			// transform.position = centerPoint + offset;
+
+			float angle = Mathf.Atan2(0, 0) * Mathf.Rad2Deg;
+			transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 		}
+		
 	}
 
 

@@ -340,7 +340,6 @@ Transform:
   - {fileID: 609819612}
   - {fileID: 1074618833}
   - {fileID: 2058495697}
-  - {fileID: 1267410845}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -488,57 +487,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4049208256507118, guid: ce494c872e71345d286ccfde8e19cc62,
     type: 2}
   m_PrefabInternal: {fileID: 1074618832}
---- !u!1001 &1267410844
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 599690592}
-    m_Modifications:
-    - target: {fileID: 4049208256507118, guid: ce494c872e71345d286ccfde8e19cc62, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049208256507118, guid: ce494c872e71345d286ccfde8e19cc62, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049208256507118, guid: ce494c872e71345d286ccfde8e19cc62, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049208256507118, guid: ce494c872e71345d286ccfde8e19cc62, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049208256507118, guid: ce494c872e71345d286ccfde8e19cc62, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049208256507118, guid: ce494c872e71345d286ccfde8e19cc62, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049208256507118, guid: ce494c872e71345d286ccfde8e19cc62, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4049208256507118, guid: ce494c872e71345d286ccfde8e19cc62, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1500267652984600, guid: ce494c872e71345d286ccfde8e19cc62, type: 2}
-      propertyPath: m_Name
-      value: Position
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ce494c872e71345d286ccfde8e19cc62, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1267410845 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4049208256507118, guid: ce494c872e71345d286ccfde8e19cc62,
-    type: 2}
-  m_PrefabInternal: {fileID: 1267410844}
 --- !u!1001 &1612962217
 Prefab:
   m_ObjectHideFlags: 0
