@@ -11,9 +11,10 @@ public class EnemyBehaviour : MonoBehaviour {
 	public GameObject bullet;
 	private GameObject centerPointRef;
 	private Vector2 centerPoint;
-	private float RotateSpeed = 5f;
+	private float RotateSpeed = .0001f;
 	private float Radius = 1f;
 	private float _angle;
+	private Vector2 offset;
 	public int personalCount;
 
 	void Start () {
@@ -26,11 +27,15 @@ public class EnemyBehaviour : MonoBehaviour {
 		} else if (this.tag == "King") {
 			health = 2;
 		}
+
+		Debug.Log(personalCount);
 	}
 
 	void Update () {
 		updateTime();
-		CircularRotate();
+		if (centerPointRef) {
+			CircularRotate();
+		}
 	}
 
 	void updateTime() {
@@ -46,11 +51,22 @@ public class EnemyBehaviour : MonoBehaviour {
 
 	
 	void CircularRotate() {
-		centerPoint = centerPointRef.transform.position;
-         _angle += RotateSpeed * Time.deltaTime;
- 
-         var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius;
-         transform.position = centerPoint + offset;
+		if (this.tag != "King"){
+			centerPoint = centerPointRef.transform.position;
+			_angle += RotateSpeed * Time.deltaTime;
+
+			if (personalCount == 1) {
+				offset = (new Vector2(Mathf.Sin(_angle - 1), Mathf.Cos(_angle)) * Radius);
+			} else if (personalCount == 2) {
+				offset = (new Vector2(Mathf.Sin(_angle - 1), Mathf.Cos(_angle - 1)) * Radius);
+			} else if (personalCount == 3) {
+				offset = (new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle - 1)) * Radius);
+			} else if (personalCount == 4) {
+				offset = (new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius);
+			}
+	
+			transform.position = centerPoint + offset;
+		}
 	}
 
 
