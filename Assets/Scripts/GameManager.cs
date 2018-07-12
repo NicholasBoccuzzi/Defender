@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour {
 	public int score = 0;
 	private int kills = 0;
 	public int phase = 1;
-	public bool phaseActive = false;
+	public bool phaseActive = true;
 
 	// Use this for initialization
 	void Start () {

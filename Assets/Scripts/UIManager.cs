@@ -8,31 +8,38 @@ public class UIManager : MonoBehaviour {
 	public GameObject GameManager;
 	private bool showPhase;
 	private float timer;
-	private bool timerStarted;
-	public float opacity;
+	private bool timerStarted = false;
+	public Text text;
+	private Color color;
 
 	void Start () {
+		timer = 10.0f;
 		phase = GameManager.GetComponent<GameManager>().phase;
 		showPhase = GameManager.GetComponent<GameManager>().phaseActive;
+		text = GetComponent<Text>();
+		color = text.color;
+		Debug.Log(showPhase);
 		startTimer();
 	}
 
 	void Update () {
+		Debug.Log(text.color.a);
+		text.text = "Phase " + phase.ToString();
 		if (showPhase && timerStarted) {
-			timer -= Time.deltaTime;
-			if	(timer <= 2.5f) {
-				opacity -= .05f * Time.deltaTime;
+			timer -= 2 * Time.deltaTime;
+			if (timer <= 5.0f) {
+				color.a = (timer/5.0f);
+				GetComponent<Text>().color = color;
 			}
-			if (timer <= 0) {
-				opacity = 0;
+			if (color.a <= 0f) {
+				showPhase = false;
 			}
 		}
 	}
 
 	void startTimer () {
 		if (showPhase && !timerStarted) {
-			timer = 5.0f;
-			opacity = 1.0f;
+			timer = 10.0f;
 			timerStarted = true;
 		}
 	}
