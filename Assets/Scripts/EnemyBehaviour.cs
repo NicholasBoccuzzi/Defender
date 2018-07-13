@@ -29,8 +29,6 @@ public class EnemyBehaviour : MonoBehaviour {
 		} else if (this.tag == "King") {
 			health = 2;
 		}
-
-		Debug.Log(personalCount);
 	}
 
 	void Update () {
@@ -42,16 +40,18 @@ public class EnemyBehaviour : MonoBehaviour {
 
 	void updateTime() {
 		timeBetween += Time.deltaTime;
-		Fire(timeBetween);
+
+		if (timeBetween  >= 3.0f && !this.dead) {
+			Fire();
+		}
 	}
 
-	void Fire(float timeBetween) {
-		if (timeBetween >= 3.0f && !this.dead) {
-			GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
-			newBullet.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, -10f, 0f);
-			newBullet.GetComponent<Bullet>().enemyBullet = true;
-			timeBetween = (Random.value * 3);
-		} 
+	void Fire() {
+		Debug.Log(timeBetween);
+		GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
+		newBullet.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, -10f, 0f);
+		newBullet.GetComponent<Bullet>().enemyBullet = true;
+		timeBetween = Random.Range(0.0f, 1.5f);
 	}
 
 	
