@@ -34,10 +34,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	void Update () {
-		
-		if (Time.deltaTime > 2.0f) {
-			updateTime();
-		}
+		updateTime();
 		if (centerPointRef) {
 			CircularRotate();
 		}
@@ -45,7 +42,10 @@ public class EnemyBehaviour : MonoBehaviour {
 
 	void updateTime() {
 		timeBetween += Time.deltaTime;
+		Fire(timeBetween);
+	}
 
+	void Fire(float timeBetween) {
 		if (timeBetween >= 3.0f && !this.dead) {
 			GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
 			newBullet.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, -10f, 0f);

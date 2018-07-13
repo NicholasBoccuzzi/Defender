@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour {
 		Debug.Log(text.color.a);
 		text.text = "Phase " + phase.ToString();
 		if (showPhase && timerStarted) {
-			timer -= 2 * Time.deltaTime;
+			timer -= 4 * Time.deltaTime;
 			if (timer <= 5.0f) {
 				color.a = (timer/5.0f);
 				GetComponent<Text>().color = color;
