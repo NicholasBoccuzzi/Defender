@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Fading : MonoBehaviour {
 
 	public Texture2D fadeOutTexture; // the texture that will overlay the screen. Loading image or black screen;
-	public float fadeSpeed = .08f; // the fading speed
+	public float fadeSpeed = .15f; // the fading speed
 	private int drawDepth = -1000; // the texture's order in the draw hierarchy. set so high so that it is always on top
 	private float alpha = 1.0f; // the texture starts out completely visable (opacity)
 	private int fadeDir = -1; // the direction of fade: in = -1 or out = 1;

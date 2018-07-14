@@ -18,15 +18,16 @@ public class UIManager : MonoBehaviour {
 		showPhase = GameManager.GetComponent<GameManager>().phaseActive;
 		text = GetComponent<Text>();
 		color = text.color;
+
 		startTimer();
 	}
 
 	void Update () {
 		text.text = "Phase " + phase.ToString();
 		if (showPhase && timerStarted) {
-			timer -= 4 * Time.deltaTime;
+			timer -= Time.deltaTime;
 			if (timer <= 5.0f) {
-				color.a = (timer/5.0f);
+				color.a = (2 * timer/5.0f);
 				GetComponent<Text>().color = color;
 			}
 			if (color.a <= 0f) {
