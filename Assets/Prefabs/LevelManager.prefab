@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutTexture: {fileID: 2800000, guid: 7ce3f44504bf940e0bfa1c452879c997, type: 3}
-  fadeSpeed: 0.08
+  fadeSpeed: 0.8
 --- !u!114 &114281047387566976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -67,3 +67,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: 60
   loading: 0
+  audioplayer: {fileID: 0}

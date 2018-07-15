@@ -270,6 +270,11 @@ Prefab:
       propertyPath: audioplayer
       value: 
       objectReference: {fileID: 2104683722}
+    - target: {fileID: 114280410851755400, guid: da7a3d6aa769f4088878c4768c899985,
+        type: 2}
+      propertyPath: fadeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da7a3d6aa769f4088878c4768c899985, type: 2}
   m_IsPrefabParent: 0

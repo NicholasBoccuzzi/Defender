@@ -26,8 +26,8 @@ public class UIManager : MonoBehaviour {
 		text.text = "Phase " + phase.ToString();
 		if (showPhase && timerStarted) {
 			timer -= Time.deltaTime;
-			if (timer <= 5.0f) {
-				color.a = (2 * timer/5.0f);
+			if (timer <= 3.0f) {
+				color.a = (10 * timer/3.0f);
 				GetComponent<Text>().color = color;
 			}
 			if (color.a <= 0f) {
@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour {
 
 	void startTimer () {
 		if (showPhase && !timerStarted) {
-			timer = 10.0f;
+			timer = 3.0f;
 			timerStarted = true;
 		}
 	}

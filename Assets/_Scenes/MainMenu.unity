@@ -687,16 +687,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114280410851755400, guid: da7a3d6aa769f4088878c4768c899985,
-        type: 2}
-      propertyPath: fadeOutTexture
-      value: 
-      objectReference: {fileID: 2800000, guid: 7ce3f44504bf940e0bfa1c452879c997, type: 3}
-    - target: {fileID: 114280410851755400, guid: da7a3d6aa769f4088878c4768c899985,
-        type: 2}
-      propertyPath: fadeSpeed
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 114281047387566976, guid: da7a3d6aa769f4088878c4768c899985,
         type: 2}
       propertyPath: audioplayer
