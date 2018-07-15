@@ -270,11 +270,6 @@ Prefab:
       propertyPath: audioplayer
       value: 
       objectReference: {fileID: 2104683722}
-    - target: {fileID: 114280410851755400, guid: da7a3d6aa769f4088878c4768c899985,
-        type: 2}
-      propertyPath: fadeSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da7a3d6aa769f4088878c4768c899985, type: 2}
   m_IsPrefabParent: 0
@@ -392,6 +387,7 @@ MonoBehaviour:
   width: 4.09
   height: 5.97
   moveLeft: 1
+  game: {fileID: 957012442}
 --- !u!4 &599690592
 Transform:
   m_ObjectHideFlags: 0
@@ -500,6 +496,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114954570962421692, guid: 77b57b270c2fc49ca95067d3c12bde4a,
+        type: 2}
+      propertyPath: game
+      value: 
+      objectReference: {fileID: 957012442}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77b57b270c2fc49ca95067d3c12bde4a, type: 2}
   m_IsPrefabParent: 0

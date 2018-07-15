@@ -47,7 +47,6 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	void Fire() {
-		Debug.Log(timeBetween);
 		GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
 		newBullet.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, -10f, 0f);
 		newBullet.GetComponent<Bullet>().enemyBullet = true;

@@ -14,6 +14,7 @@ public class EnemySpawner : MonoBehaviour {
 	float xmax;
 	float padding = 1.2f;
 	public bool moveLeft = true;
+	public GameObject game;
 
 
 
@@ -55,8 +56,10 @@ public class EnemySpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (game.GetComponent<GameManager>().phaseActive) {
 			moveEnemyGroup();
 			checkPosition();
+		}
 	}
 
 	void generateEnemy(int index, Transform child, int count) {

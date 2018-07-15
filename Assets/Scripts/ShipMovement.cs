@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class ShipMovement : MonoBehaviour {
 
+	public GameObject game;
 	public GameObject bullet;
 	private float speed = 20.0f;
 	private float padding = .2f;
 	float xmin;
 	float xmax;
+
+	void Awake () {
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -24,8 +28,10 @@ public class ShipMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		MoveLeft();
-		MoveRight();
+		if (game.GetComponent<GameManager>().phaseActive) {
+			MoveLeft();
+			MoveRight();
+		}
 
 		// Below can be used if I want to allow holding down space for the ship to continuously fire
 		// if (Input.GetKeyDown(KeyCode.Space)) {
