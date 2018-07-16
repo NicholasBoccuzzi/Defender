@@ -629,7 +629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   phase: 1
-  phaseActive: 1
+  phaseActive: 0
 --- !u!224 &957012445
 RectTransform:
   m_ObjectHideFlags: 0

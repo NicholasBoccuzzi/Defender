@@ -9,6 +9,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	public float timeBetween;
 	private bool dead = false; 
 	public GameObject bullet;
+	public GameObject game;
 	private GameObject centerPointRef;
 	private Vector2 centerPoint;
 	private Rigidbody2D rigid;

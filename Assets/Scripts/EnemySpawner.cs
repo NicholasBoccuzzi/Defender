@@ -56,7 +56,7 @@ public class EnemySpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (game.GetComponent<GameManager>().phaseActive) {
+		if (!game.GetComponent<GameManager>().phaseActive) {
 			moveEnemyGroup();
 			checkPosition();
 		}
