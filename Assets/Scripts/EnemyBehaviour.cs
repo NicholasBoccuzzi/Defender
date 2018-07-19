@@ -9,7 +9,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	public float timeBetween;
 	private bool dead = false; 
 	public GameObject bullet;
-	public GameObject game;
+	private GameObject game;
 	private GameObject centerPointRef;
 	private Vector2 centerPoint;
 	private Rigidbody2D rigid;
@@ -24,6 +24,7 @@ public class EnemyBehaviour : MonoBehaviour {
 		enemyAudioPlayer = gameObject.GetComponent<AudioSource>();
 		rigid = GetComponent<Rigidbody2D>();
 		rigid.freezeRotation = true;
+		game = GameObject.FindGameObjectWithTag("GameManager");
 
 		if (this.tag == "Pawn") {
 			health = 1;
@@ -33,9 +34,11 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	void Update () {
-		updateTime();
-		if (centerPointRef) {
-			CircularRotate();
+		if (!game.GetComponent<GameManager>().phaseActive) {
+			updateTime();
+			if (centerPointRef) {
+				CircularRotate();
+			}
 		}
 	}
 

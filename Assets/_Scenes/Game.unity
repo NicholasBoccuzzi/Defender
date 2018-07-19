@@ -273,6 +273,26 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da7a3d6aa769f4088878c4768c899985, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &241327665 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1500267652984600, guid: ce494c872e71345d286ccfde8e19cc62,
+    type: 2}
+  m_PrefabInternal: {fileID: 1612962217}
+--- !u!114 &241327666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 241327665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb78e930ccd54c19a368868a4616fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAudioClips: []
+  timeBetween: 0
+  bullet: {fileID: 0}
+  personalCount: 0
 --- !u!1 &322338365
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +625,7 @@ GameObject:
   - component: {fileID: 957012443}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -629,7 +649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   phase: 1
-  phaseActive: 0
+  phaseActive: 1
 --- !u!224 &957012445
 RectTransform:
   m_ObjectHideFlags: 0

@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour {
 				GetComponent<Text>().color = color;
 			}
 			if (color.a <= 0f) {
-				showPhase = false;
+				GameManager.GetComponent<GameManager>().phaseActive = false;
 			}
 		}
 	}
