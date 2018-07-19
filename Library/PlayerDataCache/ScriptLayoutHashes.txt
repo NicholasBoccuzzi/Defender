@@ -95,7 +95,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-5e8fc5f48e395be980f1d0704b196f3f Assembly-CSharp.dll:.EnemyBehaviour
+f6c3f76beff3542f0c6abdb1214d7028 Assembly-CSharp.dll:.EnemyBehaviour
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -157,6 +157,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Position
-e0b331de31bfd9043bf19ce3f93a1f02 Assembly-CSharp.dll:.GameManager
+35adea44e4d7eadbf748560bac0b79a3 Assembly-CSharp.dll:.GameManager
 7419b670eefba0ac722546ab1955b570 Assembly-CSharp.dll:.ShipMovement
 3fe07192f2edb1d5db28ff246035f85f Assembly-CSharp.dll:.EnemySpawner
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.animationAutoDestroy

@@ -6,6 +6,8 @@ public class ShipMovement : MonoBehaviour {
 
 	public GameObject game;
 	public GameObject bullet;
+	public GameObject explosion;
+	public AudioClip[] shipClips;
 	private float speed = 20.0f;
 	private float padding = .2f;
 	float xmin;
@@ -28,9 +30,16 @@ public class ShipMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (game.GetComponent<GameManager>().phaseActive) {
+			transform.position =new Vector3(0, -4, 0);
+		}
+
 		if (!game.GetComponent<GameManager>().phaseActive) {
 			MoveLeft();
 			MoveRight();
+			if (Input.GetKeyDown(KeyCode.Space)) {
+				fire();
+			}
 		}
 
 		// Below can be used if I want to allow holding down space for the ship to continuously fire
@@ -42,9 +51,6 @@ public class ShipMovement : MonoBehaviour {
 		// 	CancelInvoke("fire");
 		// }
 
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			fire();
-		}
 			
 
 		// restrict player to playspace		
@@ -76,7 +82,10 @@ public class ShipMovement : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider) {
 		if (collider.GetComponent<Bullet>().enemyBullet == true) {
-			Destroy(this.gameObject);
+			GameObject newExplosion = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
+			gameObject.GetComponent<SpriteRenderer>().enabled = false;
+			gameObject.GetComponent<AudioSource>().PlayOneShot(shipClips[0]);
+			Destroy(this.gameObject, 2.0f);
 			Destroy(collider.gameObject);
 		}
 	}

@@ -83,7 +83,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdd0a1f253b541ddb47667d8169d9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game: {fileID: 0}
   bullet: {fileID: 1849615344917140, guid: 9603485584b1641698c01bbc751da01e, type: 2}
+  explosion: {fileID: 1471544897174376, guid: bafb34a07208b4c5fbabc2bb76ce10cb, type: 2}
 --- !u!212 &212947869122978668
 SpriteRenderer:
   m_ObjectHideFlags: 1
