@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour {
     
 	public int target = 60;
 	private Scene currentScene;
+	private string nextScene;
 	private SceneManager sceneManager;
 	private Image whiteWipe;
 	private ImageFill imageFill;
@@ -27,10 +28,6 @@ public class LevelManager : MonoBehaviour {
 		Application.targetFrameRate = 60;
 		QualitySettings.vSyncCount = 0;
 		currentScene = SceneManager.GetActiveScene();
-
-		if (currentScene.name == "Game") {
-			audioplayer = AudioSource.FindObjectOfType<AudioSource>();
-		}
 	}
 	
 	// Update is called once per frame
@@ -39,9 +36,9 @@ public class LevelManager : MonoBehaviour {
               Application.targetFrameRate = target;
 		}
 
-		if (currentScene.name == "Game") {
+		if (nextScene == "Game") {
 			if (audioplayer != null) {
-				StartCoroutine (AudioPlayer.FadeOut(audioplayer, 10.0f));
+				StartCoroutine (AudioPlayer.FadeOut(audioplayer, 2.0f));
 				audioplayer = null;
 			}
 		}
@@ -64,6 +61,7 @@ public class LevelManager : MonoBehaviour {
 	// sets loading to active so that ImageFill can wipescreen then call LoadDefender;
 	public void setLoadingActive () {
 		loading = true;
+		nextScene = "Game";
 	}
 
 

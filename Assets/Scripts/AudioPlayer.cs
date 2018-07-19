@@ -46,10 +46,10 @@ public class AudioPlayer : MonoBehaviour {
 	
 
         while (audioSource.volume > 0.0f) {
-            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+            audioSource.volume -= startVolume * Time.deltaTime / (.5f * FadeTime);
             yield return null;
         }
- 
+		Debug.Log("Hello");
         audioSource.Stop ();
         audioSource.volume = startVolume;
 		Object.Destroy(audioSource);

@@ -458,6 +458,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 82744007285104132, guid: 7108c0af2b7ea4f04b758f4dde0cd352,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.614
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7108c0af2b7ea4f04b758f4dde0cd352, type: 2}
   m_IsPrefabParent: 0
@@ -517,10 +522,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -692,6 +697,11 @@ Prefab:
       propertyPath: audioplayer
       value: 
       objectReference: {fileID: 1275130006}
+    - target: {fileID: 114280410851755400, guid: da7a3d6aa769f4088878c4768c899985,
+        type: 2}
+      propertyPath: fadeSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da7a3d6aa769f4088878c4768c899985, type: 2}
   m_IsPrefabParent: 0
