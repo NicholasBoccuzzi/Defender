@@ -209,8 +209,8 @@ MonoBehaviour:
   enemyAudioClips:
   - {fileID: 8300000, guid: 314d205cabe1e4aaa9a29d4e76ff0ea5, type: 3}
   timeBetween: 0
+  explosion: {fileID: 1471544897174376, guid: bafb34a07208b4c5fbabc2bb76ce10cb, type: 2}
   bullet: {fileID: 1532341910441158, guid: e6b0642f540e348a48c2b99bc5075f14, type: 2}
-  game: {fileID: 0}
   personalCount: 0
 --- !u!212 &212717977470299542
 SpriteRenderer:

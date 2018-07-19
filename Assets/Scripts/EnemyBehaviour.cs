@@ -8,9 +8,11 @@ public class EnemyBehaviour : MonoBehaviour {
 	public AudioClip[] enemyAudioClips;
 	public float timeBetween;
 	private bool dead = false; 
+	public GameObject explosion;
 	public GameObject bullet;
 	private GameObject game;
 	private GameObject centerPointRef;
+	private GameObject gameManager; 
 	private Vector2 centerPoint;
 	private Rigidbody2D rigid;
 	private float RotateSpeed = 5f;
@@ -19,6 +21,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	public int personalCount;
 
 	void Start () {
+		gameManager = GameObject.FindGameObjectWithTag("GameManager");
 		centerPointRef = GameObject.FindGameObjectWithTag("King");
 		timeBetween = (Random.value * 2);
 		enemyAudioPlayer = gameObject.GetComponent<AudioSource>();
@@ -81,6 +84,8 @@ public class EnemyBehaviour : MonoBehaviour {
 			if (health <= 0) {
 				this.dead = true;
 				enemyAudioPlayer.PlayOneShot(enemyAudioClips[0]);
+				GameObject newExplosion = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
+				gameManager.GetComponent<GameManager>().enemiesRemaining -= 1;
 				gameObject.GetComponent<SpriteRenderer>().enabled = false;
 				gameObject.GetComponent<PolygonCollider2D>().enabled = false;
 				Object.Destroy(this.gameObject, 2.0f);

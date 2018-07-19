@@ -219,6 +219,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 314d205cabe1e4aaa9a29d4e76ff0ea5, type: 3}
   - {fileID: 8300000, guid: b8fb61c57a20f4228a25c9738ca114aa, type: 3}
   timeBetween: 0
+  explosion: {fileID: 1471544897174376, guid: bafb34a07208b4c5fbabc2bb76ce10cb, type: 2}
   bullet: {fileID: 1532341910441158, guid: e6b0642f540e348a48c2b99bc5075f14, type: 2}
   personalCount: 0
 --- !u!212 &212223251240089256

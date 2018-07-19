@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\animationAutoDestroy.cs" />
      <Compile Include="Assets\Scripts\AudioFadeOut.cs" />
      <Compile Include="Assets\Scripts\AudioPlayer.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
